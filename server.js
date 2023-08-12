@@ -3,10 +3,28 @@ const express = require('express');
 const app = express();
 const PORT = 3030;
 
+// set up mongoose & config
+const mongoose = require('mongoose')
+const passport = require('passport')
+const session = require('express-session')
+const MongoStore = require('connect-mongo')(session)
+const flash = require('express-flash')
+const logger = require('morgan')
+const connectDB = require('./config/database')
+
+// Set up Routes
+const mainRoutes = require('./routes/main');
+const todosRoutes = require('./routes/todos')
 
 // Configure dotenv 
-require('dotenv').config()
+require('dotenv').config({path: './config/.env'})
 //const dotenv = require('dotenv')
+
+// Passport config
+require('./config/passport')(passport)
+
+// Connect Database
+connectDB();
 
 
 
@@ -19,6 +37,9 @@ app.get('/', async (req,res) => {
     }
 });
 
+// Use routes
+app.use('/', mainRoutes);
+app.use('/todos', todosRoutes);
 
 
 // Set up PORT connection
