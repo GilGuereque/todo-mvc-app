@@ -4,6 +4,7 @@
   "description": "todo list using mvc",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/GilGuereque/todo-mvc-app/issues"
   },
-  "homepage": "https://github.com/GilGuereque/todo-mvc-app#readme"
+  "homepage": "https://github.com/GilGuereque/todo-mvc-app#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3",
+    "nodemon": "^3.0.1"
+  }
 }
