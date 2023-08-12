@@ -1,0 +1,19 @@
+{
+  "name": "todo-mvc-app",
+  "version": "1.0.0",
+  "description": "todo list using mvc",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GilGuereque/todo-mvc-app.git"
+  },
+  "author": "Gil Guereque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GilGuereque/todo-mvc-app/issues"
+  },
+  "homepage": "https://github.com/GilGuereque/todo-mvc-app#readme"
+}
