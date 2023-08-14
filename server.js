@@ -33,9 +33,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(logger('dev'));
 
-// Session
-
-
 
 // Initial GET request
 app.get('/', async (req,res) => {
