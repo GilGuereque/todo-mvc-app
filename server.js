@@ -34,14 +34,11 @@ app.use(express.json());
 app.use(logger('dev'));
 
 
-// Initial GET request
-app.get('/', async (req,res) => {
-    try {
-        res.render('index.ejs');
-    } catch (error) {
-        console.log(error);
-    }
-});
+// Passport middleware
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use(flash())
 
 // Use routes
 app.use('/', mainRoutes);
