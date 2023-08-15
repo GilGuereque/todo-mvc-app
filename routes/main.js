@@ -12,3 +12,6 @@ router.get('/', homeController.getIndex);
 //         console.log(error);
 //     }
 // });
+
+// export module
+module.exports = router
