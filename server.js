@@ -13,7 +13,7 @@ const logger = require('morgan')
 const connectDB = require('./config/database')
 
 // Set up Routes
-const mainRoutes = require('./routes/main');
+const homeRoutes = require('./routes/home');
 const todosRoutes = require('./routes/todos')
 
 // Configure dotenv 
@@ -33,21 +33,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(logger('dev'));
 
-// Sessions
-app.use(
-    session({
-      secret: 'keyboard cat',
-      resave: false,
-      saveUninitialized: false,
-      store: new MongoStore({ mongooseConnection: mongoose.connection }),
-    })
-  )
+// // Sessions
+// app.use(
+//     session({
+//       secret: 'keyboard cat',
+//       resave: false,
+//       saveUninitialized: false,
+//       store: new MongoStore({ mongooseConnection: mongoose.connection }),
+//     })
+//   )
 
-// Passport middleware
-app.use(passport.initialize())
-app.use(passport.session())
+// // Passport middleware
+// app.use(passport.initialize())
+// app.use(passport.session())
 
-app.use(flash())
+// app.use(flash())
 
 // Use routes
 app.use('/', mainRoutes);
