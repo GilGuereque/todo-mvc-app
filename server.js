@@ -6,10 +6,10 @@ const PORT = 3030;
 // set up mongoose & config
 const mongoose = require('mongoose')
 const passport = require('passport')
-const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
-const flash = require('express-flash')
-const logger = require('morgan')
+// const session = require('express-session')
+// const MongoStore = require('connect-mongo')(session)
+// const flash = require('express-flash')
+// const logger = require('morgan')
 const connectDB = require('./config/database')
 
 // Set up Routes
